@@ -1,7 +1,14 @@
 *.o
-gram.[ch]
-lex.[ch]
+/gram.[ch]
+/gram.output
+/gmon.out
+/lex.[ch]
 cvs-fast-export
 test
 *.html
 docbook-xsl.css
+/*.gcno
+/*.gcda
+/*.tar.gz
+/MANIFEST
+/*.1
