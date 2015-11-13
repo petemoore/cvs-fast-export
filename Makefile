@@ -127,6 +127,7 @@ clean:
 	rm -f *.1 *.html docbook-xsl.css gram.output gmon.out
 	rm -f MANIFEST index.html *.tar.gz
 	rm -f *.gcno *.gcda
+	git clean -fdx
 
 check: cvs-fast-export
 	@[ -d tests ] || mkdir tests
