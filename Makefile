@@ -123,11 +123,7 @@ man: cvs-fast-export.1 cvssync.1 cvsconvert.1
 html: cvs-fast-export.html cvssync.html cvsconvert.html
 
 clean:
-	rm -f $(OBJS) gram.h gram.c lex.h lex.c cvs-fast-export
-	rm -f *.1 *.html docbook-xsl.css gram.output gmon.out
-	rm -f MANIFEST index.html *.tar.gz
-	rm -f *.gcno *.gcda
-	git clean -fdx
+	git clean -fdX
 
 check: cvs-fast-export
 	@[ -d tests ] || mkdir tests
