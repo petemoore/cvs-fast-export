@@ -1,0 +1,20 @@
+language: c
+compiler:
+  - gcc
+env:
+  - PATH=$HOME/bin:$PATH
+
+before_install:
+    - pushd ~
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq flex python rcs cvs git
+    - curl -L http://ftp.gnu.org/gnu/bison/bison-3.0.4.tar.gz > bison.tar.gz
+    - tar xvfz bison.tar.gz
+    - cd bison-3.0.4
+    - mkdir $HOME/bin
+    - ./configure --prefix=$HOME && make && make install
+    - ${HOME}/bin/bison --version
+    - popd
+
+script:
+  - make check

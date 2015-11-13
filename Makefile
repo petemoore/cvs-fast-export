@@ -31,7 +31,7 @@ GCC_WARNINGS3=-Wno-unused-function -Wno-unused-label -Wno-format-zero-length
 GCC_WARNINGS=$(GCC_WARNINGS1) $(GCC_WARNINGS2) $(GCC_WARNINGS3)
 CFLAGS=$(GCC_WARNINGS)
 CPPFLAGS += -I. -I$(srcdir)
-#LIBS=-lrt
+LIBS=-lrt
 CPPFLAGS += -DVERSION=\"$(VERSION)\"
 
 # Enable this for multithreading.
